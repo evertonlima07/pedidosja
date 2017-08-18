@@ -1,0 +1,5 @@
+C:\Users\Everton\OneDrive\UFS - Bacharelado em Sistemas da Informação\2017.1 - 6º Periodo\Engenharia de Softare II\Projeto\pedidosja\PedidosJa\Model\bin\Debug\Model.dll
+C:\Users\Everton\OneDrive\UFS - Bacharelado em Sistemas da Informação\2017.1 - 6º Periodo\Engenharia de Softare II\Projeto\pedidosja\PedidosJa\Model\bin\Debug\Model.pdb
+C:\Users\Everton\OneDrive\UFS - Bacharelado em Sistemas da Informação\2017.1 - 6º Periodo\Engenharia de Softare II\Projeto\pedidosja\PedidosJa\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\Everton\OneDrive\UFS - Bacharelado em Sistemas da Informação\2017.1 - 6º Periodo\Engenharia de Softare II\Projeto\pedidosja\PedidosJa\Model\obj\Debug\Model.dll
+C:\Users\Everton\OneDrive\UFS - Bacharelado em Sistemas da Informação\2017.1 - 6º Periodo\Engenharia de Softare II\Projeto\pedidosja\PedidosJa\Model\obj\Debug\Model.pdb

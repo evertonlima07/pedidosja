@@ -1,0 +1,7 @@
+C:\Users\Everton\OneDrive\UFS - Bacharelado em Sistemas da Informação\2017.1 - 6º Periodo\Engenharia de Softare II\Projeto\pedidosja\PedidosJa\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Everton\OneDrive\UFS - Bacharelado em Sistemas da Informação\2017.1 - 6º Periodo\Engenharia de Softare II\Projeto\pedidosja\PedidosJa\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Everton\OneDrive\UFS - Bacharelado em Sistemas da Informação\2017.1 - 6º Periodo\Engenharia de Softare II\Projeto\pedidosja\PedidosJa\Persistencia\bin\Debug\Model.dll
+C:\Users\Everton\OneDrive\UFS - Bacharelado em Sistemas da Informação\2017.1 - 6º Periodo\Engenharia de Softare II\Projeto\pedidosja\PedidosJa\Persistencia\bin\Debug\Model.pdb
+C:\Users\Everton\OneDrive\UFS - Bacharelado em Sistemas da Informação\2017.1 - 6º Periodo\Engenharia de Softare II\Projeto\pedidosja\PedidosJa\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Everton\OneDrive\UFS - Bacharelado em Sistemas da Informação\2017.1 - 6º Periodo\Engenharia de Softare II\Projeto\pedidosja\PedidosJa\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Everton\OneDrive\UFS - Bacharelado em Sistemas da Informação\2017.1 - 6º Periodo\Engenharia de Softare II\Projeto\pedidosja\PedidosJa\Persistencia\obj\Debug\Persistencia.pdb
