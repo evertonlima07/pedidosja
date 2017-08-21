@@ -8,5 +8,7 @@ namespace Model.Models
 {
     class _EXEMPLO__Objeto
     {
+        Empresa e = new Empresa();
+        
     }
 }
