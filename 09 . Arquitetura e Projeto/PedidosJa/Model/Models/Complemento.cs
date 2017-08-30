@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Models
 {
-    class Complemento
+    public class Complemento
     {
         private int id;
         private string descricao;

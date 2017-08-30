@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Models
 {
-    class Produto
+    public class Produto
     {
         private int id;
         private string nome;
@@ -32,7 +32,7 @@ namespace Model.Models
             set { preco = value; }
         }
 
-        public Empresa empresa
+        public Empresa Empresa
         {
             get { return empresa; }
             set { empresa = value; }

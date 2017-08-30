@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Models
 {
-    class Empresa
+    public class Empresa
     {
         private int id;
         private string nome;

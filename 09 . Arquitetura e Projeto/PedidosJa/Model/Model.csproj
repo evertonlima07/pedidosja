@@ -40,6 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Complemento.cs" />
+    <Compile Include="Models\ComplementoPedido.cs" />
+    <Compile Include="Models\Empresa.cs" />
+    <Compile Include="Models\Pedido.cs" />
+    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\ProdutoComplemento.cs" />
+    <Compile Include="Models\ProdutoPedido.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\[EXEMPLO] Objeto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

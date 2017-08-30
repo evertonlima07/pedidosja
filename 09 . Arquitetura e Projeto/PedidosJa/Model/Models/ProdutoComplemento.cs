@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Models
 {
-    class ProdutoComplemento
+    public class ProdutoComplemento
     {
         private Produto produto;
         private Complemento complemento;

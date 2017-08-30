@@ -40,9 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Persistencia\RepositorioComplemento.cs" />
+    <Compile Include="Persistencia\RepositorioComplementoPedido.cs" />
+    <Compile Include="Persistencia\RepositorioEmpresa.cs" />
+    <Compile Include="Persistencia\RepositorioPedido.cs" />
+    <Compile Include="Persistencia\RepositorioProduto.cs" />
+    <Compile Include="Persistencia\RepositorioProdutoComplemento.cs" />
+    <Compile Include="Persistencia\RepositorioProdutoPedido.cs" />
     <Compile Include="Persistencia\RepositorioUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{21c3c163-b67b-458c-a765-af61f8fc340f}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
