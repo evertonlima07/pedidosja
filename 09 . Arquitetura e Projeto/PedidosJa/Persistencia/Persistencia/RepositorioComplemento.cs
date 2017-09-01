@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Model.Models;
 
-namespace Persistencia.Persistencias
+namespace Persistencia.Persistencia
 {
-    class RepositorioComplemento
+    public class RepositorioComplemento
     {
         private static List<Complemento> listaComplemento;
 
