@@ -7,7 +7,7 @@ using Model.Models;
 
 namespace Persistencia.Persistencia
 {
-    class RepositorioProdutoComplemento
+    public class RepositorioProdutoComplemento
     {
         private static List<ProdutoComplemento> listaProdutoComplemento;
 

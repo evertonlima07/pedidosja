@@ -7,7 +7,7 @@ using Model.Models;
 
 namespace Persistencia.Persistencia
 {
-    class RepositorioUsuario
+    public class RepositorioUsuario
     {
         private static List<Usuario> listaUsuario;
 
