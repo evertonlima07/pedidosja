@@ -72,3 +72,5 @@ C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\obj\Debug\PedidosJa.csprojResolveAssemblyReference.cache
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\obj\Debug\PedidosJa.dll
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\obj\Debug\PedidosJa.pdb
+C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Model.dll
+C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Model.pdb
