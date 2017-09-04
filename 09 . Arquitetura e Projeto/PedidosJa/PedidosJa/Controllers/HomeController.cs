@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using PedidosJa.Util;
 using Model.Models;
 
@@ -13,6 +9,11 @@ namespace PedidosJa.Controllers
         public ActionResult Index()
         {
             //LOGIN AQUI
+            //ESSE CÓDIGO SERÁ USADO NO LOGOFF
+            SessionHelper.Set(SessionKeys.USUARIO, null);
+            SessionHelper.Set(SessionKeys.EMPRESA, null);
+            SessionHelper.Set(SessionKeys.TIPO_USER, null);
+
             return View();
         }
 
