@@ -14,6 +14,7 @@ namespace Model.Models
         private string email;
         private string login;
         private string senha;
+        private string telefone;
 
         public int Id
         {
@@ -51,5 +52,10 @@ namespace Model.Models
             set { senha= value; }
         }
 
+        public string Telefone
+        {
+            get { return telefone; }
+            set { telefone = value; }
+        }
     }
 }

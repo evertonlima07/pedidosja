@@ -14,6 +14,17 @@ namespace Persistencia.Persistencia
         static RepositorioUsuario()
         {
             listaUsuario = new List<Usuario>();
+
+            Usuario usuario1 = new Usuario();
+            usuario1.Id = 1;
+            usuario1.Nome = "Daniel Lima";
+            usuario1.Endereco = "Rua Francisco Oliveira";
+            usuario1.Email = "daniel102510@hotmail.com";
+            usuario1.Login = "daniellima";
+            usuario1.Senha = "daniellima";
+            usuario1.Telefone = "79 998397106";
+
+            listaUsuario.Add(usuario1);
         }
 
         public Usuario Adicionar(Usuario usuario)

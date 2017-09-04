@@ -1,6 +1,8 @@
 ﻿using System.Web.Mvc;
 using PedidosJa.Util;
 using Model.Models;
+using Negocio.Business;
+using System.Collections.Generic;
 
 namespace PedidosJa.Controllers
 {
@@ -38,21 +40,16 @@ namespace PedidosJa.Controllers
 
         public ActionResult Empresa()
         {
-            //ESSE CÓDIGO SERÁ USADO NO LOGIN
-            Empresa empresa = new Empresa();
-            empresa.Id = 1;
-            empresa.Nome = "Itatech Jr.";
-            empresa.Telefone = "79998397106";
-            empresa.Login = "itetech";
-            empresa.Senha = "itatech";
-            empresa.Funcionamento = "ABERTO";
+            GerenciadoraEmpresa ge = new GerenciadoraEmpresa();
+            List<Empresa> empresas = ge.ObterTodos();
+
+            Empresa empresa = empresas[0];
 
             SessionHelper.Set(SessionKeys.TIPO_USER, "Empresa");
             SessionHelper.Set(SessionKeys.EMPRESA, empresa);
             //
 
-            ViewBag.Title = "Home";
-            return View();
+            return RedirectToAction("ListaDePedidos", "Pedido");
         }
         
     }

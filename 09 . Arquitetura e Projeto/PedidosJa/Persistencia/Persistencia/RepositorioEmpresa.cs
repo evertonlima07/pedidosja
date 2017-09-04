@@ -14,6 +14,26 @@ namespace Persistencia.Persistencia
         static RepositorioEmpresa()
         {
             listaEmpresa = new List<Empresa>();
+
+            Empresa empresa1 = new Empresa();
+            empresa1.Id = 1;
+            empresa1.Nome = "Itatech Jr.";
+            empresa1.Telefone = "79998397106";
+            empresa1.Login = "itetech";
+            empresa1.Senha = "itatech";
+            empresa1.Funcionamento = "ABERTO";
+
+            listaEmpresa.Add(empresa1);
+
+            Empresa empresa2 = new Empresa();
+            empresa2.Id = 2;
+            empresa2.Nome = "Daniel Tech";
+            empresa2.Telefone = "79998397106";
+            empresa2.Login = "daniel";
+            empresa2.Senha = "daniel";
+            empresa2.Funcionamento = "ABERTO";
+
+            listaEmpresa.Add(empresa2);
         }
 
         public Empresa Adicionar(Empresa empresa)

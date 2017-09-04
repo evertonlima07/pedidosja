@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model.Models;
+using System.Linq.Expressions;
 
 namespace Persistencia.Persistencia
 {
@@ -14,6 +15,34 @@ namespace Persistencia.Persistencia
         static RepositorioPedido()
         {
             listaPedido = new List<Pedido>();
+
+            RepositorioEmpresa re = new RepositorioEmpresa();
+            RepositorioUsuario ru = new RepositorioUsuario();
+
+            Pedido pedido1 = new Pedido();
+            pedido1.Id = 1;
+            pedido1.Empresa = re.ObterTodos()[0];
+            pedido1.EnderecoUsuario = "Rua Francisco Oliveira";
+            pedido1.DescricaoPagamento = "A vista, troco para 50";
+            pedido1.TelefoneUsuario = "79 998397106";
+            pedido1.NomeUsuario = "Daniel Lima";
+            pedido1.Situacao = "A fazer";
+            pedido1.Usuario = ru.ObterTodos()[0];
+
+            listaPedido.Add(pedido1);
+            
+            Pedido pedido2 = new Pedido();
+            pedido2.Id = 2;
+            pedido2.Empresa = re.ObterTodos()[1];
+            pedido2.EnderecoUsuario = "Rua Quintino de Lacerda";
+            pedido2.DescricaoPagamento = "Cartão";
+            pedido2.TelefoneUsuario = "79 998397106";
+            pedido2.NomeUsuario = "Daniel Lima";
+            pedido2.Situacao = "A fazer";
+            pedido2.Usuario = ru.ObterTodos()[0];
+            
+            listaPedido.Add(pedido2);
+            
         }
 
         public Pedido Adicionar(Pedido pedido)
@@ -38,6 +67,11 @@ namespace Persistencia.Persistencia
         public Pedido Obter(Func<Pedido, bool> where)
         {
             return listaPedido.Where(where).FirstOrDefault();
+        }
+
+        public List<Pedido> ObterPorEmpresa(Func<Pedido, bool> where)
+        {
+            return listaPedido.Where(where).ToList();
         }
 
         public List<Pedido> ObterTodos()

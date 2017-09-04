@@ -12,7 +12,7 @@ namespace Negocio.Business
     {
         RepositorioEmpresa repositorioEmpresa;
 
-        GerenciadoraEmpresa() {
+        public GerenciadoraEmpresa() {
             repositorioEmpresa = new RepositorioEmpresa();
         }
 

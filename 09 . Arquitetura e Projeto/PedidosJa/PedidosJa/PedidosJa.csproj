@@ -143,6 +143,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PedidoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -188,7 +189,8 @@
     <Content Include="Views\Shared\Menu\MenuEmpresa.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Home\Usuario.cshtml" />
-    <Content Include="Views\Home\Empresa.cshtml" />
+    <Content Include="Views\Pedido\ListaDePedidos.cshtml" />
+    <Content Include="Views\Pedido\VerPedidoEmpresa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -212,6 +214,10 @@
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{21c3c163-b67b-458c-a765-af61f8fc340f}</Project>
       <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{9e1092ef-dc16-4929-a7d4-b98d9257db8c}</Project>
+      <Name>Negocio</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

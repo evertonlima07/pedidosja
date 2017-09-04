@@ -12,7 +12,7 @@ namespace Negocio.Business
     {
         RepositorioPedido repositorioPedido;
 
-        GerenciadoraPedido()
+        public GerenciadoraPedido()
         {
             repositorioPedido = new RepositorioPedido();
         }
@@ -35,6 +35,11 @@ namespace Negocio.Business
         public Pedido Obter(Func<Pedido, bool> where)
         {
             return repositorioPedido.Obter(where);
+        }
+
+        public List<Pedido> ObterPorEmpresa(Func<Pedido, bool> where)
+        {
+            return repositorioPedido.ObterPorEmpresa(where);
         }
 
         public List<Pedido> ObterTodos()

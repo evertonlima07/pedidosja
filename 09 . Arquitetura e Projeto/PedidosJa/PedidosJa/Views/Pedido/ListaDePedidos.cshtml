@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Model.Models.Pedido>
+
+@{
+    ViewBag.Title = "Lista de Pedidos";
+}
+
+<h2>Lista de Pedidos</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Endereço do Cliente
+        </th>
+        <th>
+            Descrição do Pagamento
+        </th>
+        <th>
+            Telefone do Cliente
+        </th>
+        <th>
+            Nome do Cliente
+        </th>
+        <th>
+            Situação do pedido
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnderecoUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescricaoPagamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelefoneUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Situacao)
+        </td>
+        <td>
+            @Html.ActionLink("Detalhe do Pedido", "VerPedidoEmpresa", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
