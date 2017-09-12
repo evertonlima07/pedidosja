@@ -38,6 +38,8 @@ C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Microsoft.ApplicationInsights.dll
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Model.dll
+C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Negocio.dll
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Newtonsoft.Json.dll
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\System.Web.Helpers.dll
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\System.Web.Mvc.dll
@@ -47,6 +49,9 @@ C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\System.Web.WebPages.dll
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\System.Web.WebPages.Razor.dll
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\WebGrease.dll
+C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Persistencia.dll
+C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Model.pdb
+C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Negocio.pdb
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\System.Web.Helpers.xml
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\System.Web.Mvc.xml
@@ -62,6 +67,7 @@ C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Microsoft.AI.Web.xml
+C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Persistencia.pdb
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\pt-br\System.Web.Helpers.resources.dll
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\pt-br\System.Web.Mvc.resources.dll
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\pt-br\System.Web.Optimization.resources.dll
@@ -72,9 +78,3 @@ C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\obj\Debug\PedidosJa.csprojResolveAssemblyReference.cache
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\obj\Debug\PedidosJa.dll
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\obj\Debug\PedidosJa.pdb
-C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Model.dll
-C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Model.pdb
-C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Negocio.dll
-C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Persistencia.dll
-C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Negocio.pdb
-C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\PedidosJa\bin\Persistencia.pdb

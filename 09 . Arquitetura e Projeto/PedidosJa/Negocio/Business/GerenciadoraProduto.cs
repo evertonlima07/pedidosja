@@ -12,7 +12,7 @@ namespace Negocio.Business
     {
         RepositorioProduto repositorioProduto;
 
-        GerenciadoraProduto()
+        public GerenciadoraProduto()
         {
             repositorioProduto = new RepositorioProduto();
         }
@@ -35,6 +35,11 @@ namespace Negocio.Business
         public Produto Obter(Func<Produto, bool> where)
         {
             return repositorioProduto.Obter(where);
+        }
+
+        public List<Produto> ObterTodosDaEmpresa(Func<Produto, bool> where)
+        {
+            return repositorioProduto.ObterTodosDaEmpresa(where);
         }
 
         public List<Produto> ObterTodos()

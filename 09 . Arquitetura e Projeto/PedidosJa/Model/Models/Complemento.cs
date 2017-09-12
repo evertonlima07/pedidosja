@@ -10,6 +10,7 @@ namespace Model.Models
     {
         private int id;
         private string descricao;
+        private Empresa empresa;
 
         public int Id
         {
@@ -21,6 +22,12 @@ namespace Model.Models
         {
             get { return descricao; }
             set { descricao = value; }
+        }
+
+        public Empresa Empresa
+        {
+            get { return empresa; }
+            set { empresa = value; }
         }
 
     }

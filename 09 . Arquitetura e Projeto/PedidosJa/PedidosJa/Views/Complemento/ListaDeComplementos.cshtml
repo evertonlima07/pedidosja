@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Model.Models.Complemento>
+
+@{
+    ViewBag.Title = "Lista de Complementos";
+}
+
+<h2>Lista de Complementos</h2>
+
+<p>
+    @Html.ActionLink("Novo Complemento", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.ActionLink("Alterar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Remover", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -12,7 +12,7 @@ namespace Negocio.Business
     {
         RepositorioComplemento repositorioComplemento;
 
-        GerenciadoraComplemento()
+        public GerenciadoraComplemento()
         {
             repositorioComplemento = new RepositorioComplemento();
         }
@@ -37,9 +37,24 @@ namespace Negocio.Business
             return repositorioComplemento.Obter(where); ;
         }
 
+        public List<Complemento> ObterPorEmpresa(Func<Complemento, bool> where)
+        {
+            return repositorioComplemento.ObterPorEmpresa(where);
+        }
+
         public List<Complemento> ObterTodos()
         {
             return repositorioComplemento.ObterTodos();
+        }
+
+        public static bool Existe(Complemento c, List<Complemento> lista)
+        {
+            foreach (var comp in lista)
+            {
+                if (c.Id == comp.Id) return true;
+            }
+
+            return false;
         }
     }
 }
