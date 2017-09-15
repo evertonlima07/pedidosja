@@ -200,6 +200,8 @@
     <Content Include="Views\Complemento\ListaDeComplementos.cshtml" />
     <Content Include="Views\Produto\Alterar.cshtml" />
     <Content Include="Views\Complemento\SelecionarComplementosAlterarProduto.cshtml" />
+    <Content Include="Views\Complemento\Create.cshtml" />
+    <Content Include="Views\Complemento\Alterar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

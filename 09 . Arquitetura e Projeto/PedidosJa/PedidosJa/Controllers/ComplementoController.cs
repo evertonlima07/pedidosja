@@ -50,6 +50,7 @@ namespace PedidosJa.Controllers
         [HttpPost]
         public ActionResult SelecionarComplementosNovoProduto(FormCollection form)
         {
+            GerenciadoraProduto gp = new GerenciadoraProduto();
             String[] lista = form["Complemento"].Split(',');
             Produto produto = (Produto) Util.SessionHelper.Get(Util.SessionKeys.PRODUTO);
             GerenciadoraComplemento gc = new GerenciadoraComplemento();
@@ -64,9 +65,86 @@ namespace PedidosJa.Controllers
                     produto.ListaComplemento.Add(pc);
                 }
             }
-
+            gp.Editar(produto);
             return RedirectToAction("ProcessaAdicionarProduto", "Produto");
         }
-        
+
+        [HttpPost]
+        public ActionResult SelecionarComplementosAlterarProduto(FormCollection form)
+        {
+            GerenciadoraProduto gp = new GerenciadoraProduto();
+            String[] lista = form["Complemento"].Split(',');
+            Produto produto = (Produto)Util.SessionHelper.Get(Util.SessionKeys.PRODUTO);
+            GerenciadoraComplemento gc = new GerenciadoraComplemento();
+            if (lista != null)
+            {
+                foreach (var comp in lista)
+                {
+                    Complemento complemento = gc.Obter(c => c.Id == Convert.ToInt32(comp.ToString()));
+                    ProdutoComplemento pc = new ProdutoComplemento();
+                    pc.Produto = produto;
+                    pc.Complemento = complemento;
+
+                    produto.ListaComplemento.Add(pc);
+                }
+            }
+            gp.Editar(produto);
+            return RedirectToAction("ListaDeProdutos", "Produto");
+        }
+
+        public ActionResult Remover(int id)
+        {
+            GerenciadoraComplemento gc = new GerenciadoraComplemento();
+            Complemento complemento = gc.Obter(c => c.Id == id);
+            gc.Remover(complemento);
+            return RedirectToAction("ListaDeComplementos");
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Complemento complemento)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    complemento.Empresa = (Empresa) Util.SessionHelper.Get(Util.SessionKeys.EMPRESA);
+                    GerenciadoraComplemento gc = new GerenciadoraComplemento();
+                    gc.Adicionar(complemento);
+                    return RedirectToAction("ListaDeComplementos");
+                }
+            }
+            catch
+            {
+
+            }
+
+            return View();
+        }
+
+        public ActionResult Alterar(int id)
+        {
+            GerenciadoraComplemento gc = new GerenciadoraComplemento();
+            Complemento complemento = gc.Obter(c => c.Id == id);
+            return View(complemento);
+        }
+
+        [HttpPost]
+        public ActionResult Alterar(Complemento complemento)
+        {
+            // Retrieve existing dinner
+            GerenciadoraComplemento gc = new GerenciadoraComplemento();
+            Complemento complementoAlt = gc.Obter(c => c.Id == complemento.Id);
+            complementoAlt.Descricao = complemento.Descricao;
+            
+            gc.Editar(complementoAlt);
+
+            return RedirectToAction("ListaDeComplementos");
+        }
     }
+
 }

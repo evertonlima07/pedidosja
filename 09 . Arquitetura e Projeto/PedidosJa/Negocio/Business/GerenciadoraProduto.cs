@@ -14,7 +14,7 @@ namespace Negocio.Business
 
         public GerenciadoraProduto()
         {
-            repositorioProduto = new RepositorioProduto();
+           repositorioProduto = new RepositorioProduto();
         }
 
         public Produto Adicionar(Produto produto)
