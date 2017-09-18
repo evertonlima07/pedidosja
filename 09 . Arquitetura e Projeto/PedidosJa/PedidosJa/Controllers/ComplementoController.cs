@@ -41,7 +41,7 @@ namespace PedidosJa.Controllers
             
             foreach (var pc in produtoAtual.ListaComplemento)
             {
-                listaComplementos.Add(pc.Complemento);
+                listaComplementos.Add(pc);
             }
             ViewBag.ListaComplementos = listaComplementos;
             return View(gc.ObterPorEmpresa(e => e.Empresa.Id == empresaAtual.Id));
@@ -51,22 +51,23 @@ namespace PedidosJa.Controllers
         public ActionResult SelecionarComplementosNovoProduto(FormCollection form)
         {
             GerenciadoraProduto gp = new GerenciadoraProduto();
-            String[] lista = form["Complemento"].Split(',');
-            Produto produto = (Produto) Util.SessionHelper.Get(Util.SessionKeys.PRODUTO);
-            GerenciadoraComplemento gc = new GerenciadoraComplemento();
-            if (lista != null) { 
-                foreach (var comp in lista)
-                {
-                    Complemento complemento = gc.Obter(c => c.Id == Convert.ToInt32(comp.ToString()));
-                    ProdutoComplemento pc = new ProdutoComplemento();
-                    pc.Produto = produto;
-                    pc.Complemento = complemento;
+            String complementos = form["Complemento"];
+            if (complementos != null) { 
+                String[] lista = complementos.Split(',');
+                Produto produto = (Produto) Util.SessionHelper.Get(Util.SessionKeys.PRODUTO);
+                GerenciadoraComplemento gc = new GerenciadoraComplemento();
+                if (lista != null) { 
+                    foreach (var comp in lista)
+                    {
+                        Complemento complemento = gc.Obter(c => c.Id == Convert.ToInt32(comp.ToString()));
 
-                    produto.ListaComplemento.Add(pc);
+                        produto.ListaComplemento.Add(complemento);
+                    }
                 }
+                gp.Editar(produto);
             }
-            gp.Editar(produto);
-            return RedirectToAction("ProcessaAdicionarProduto", "Produto");
+
+            return RedirectToAction("ListaDeProdutos", "Produto");
         }
 
         [HttpPost]
@@ -81,11 +82,8 @@ namespace PedidosJa.Controllers
                 foreach (var comp in lista)
                 {
                     Complemento complemento = gc.Obter(c => c.Id == Convert.ToInt32(comp.ToString()));
-                    ProdutoComplemento pc = new ProdutoComplemento();
-                    pc.Produto = produto;
-                    pc.Complemento = complemento;
 
-                    produto.ListaComplemento.Add(pc);
+                    produto.ListaComplemento.Add(complemento);
                 }
             }
             gp.Editar(produto);

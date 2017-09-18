@@ -6,47 +6,29 @@
 
 <h2>Lista de Pedidos</h2>
 
-<table class="table">
-    <tr>
-        <th>
-            Endereço do Cliente
-        </th>
-        <th>
-            Descrição do Pagamento
-        </th>
-        <th>
-            Telefone do Cliente
-        </th>
-        <th>
-            Nome do Cliente
-        </th>
-        <th>
-            Situação do pedido
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.EnderecoUsuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DescricaoPagamento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TelefoneUsuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NomeUsuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Situacao)
-        </td>
-        <td>
-            @Html.ActionLink("Detalhe do Pedido", "VerPedidoEmpresa", new { id = item.Id })
-        </td>
-    </tr>
-}
+    @{
+        WebGrid pedidos = new WebGrid(source: Model, canPage: true, canSort: true);
+        @pedidos.GetHtml(
+         displayHeader: true,
+         fillEmptyRows: true,
+         emptyRowCellValue: "---",
+         mode: WebGridPagerModes.All,
+         numericLinksCount: 2,
+         tableStyle: "table",
+         columns: pedidos.Columns(
+             pedidos.Column("EnderecoUsuario", "Endereço do Cliente"),
+             pedidos.Column("DescricaoPagamento", "Descrição do pagamento"),
+             pedidos.Column("TelefoneUsuario", "Telefone do cliente"),
+             pedidos.Column("NomeUsuario", "Nome do cliente"),
+             pedidos.Column("Situacao", "Situação"),
+             pedidos.Column("Data", "Data do pedido"),
+             pedidos.Column(null,null, canSort: false,
+                format: (item) => new HtmlString(String.Format("{0}", new object[] {
+                    Html.ActionLink("Detalhe do Pedido", "VerPedidoEmpresa", new { id = item.Id }).ToString()
+                }))
+              )
+            )
+    );
+    }
 
 </table>

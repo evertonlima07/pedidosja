@@ -12,7 +12,10 @@ namespace Model.Models
         private string nome;
         private float preco;
         private Empresa empresa;
-        private List<ProdutoComplemento> listaComplemento;
+        private List<Complemento> listaComplemento;
+
+        //ATRIBUTO SERÁ UTILIZADO EM VIEW DE DETALHE DE PEDIDO
+        private string complementosFormatados;
 
         public int Id
         {
@@ -38,10 +41,16 @@ namespace Model.Models
             set { empresa = value; }
         }
 
-        public List<ProdutoComplemento> ListaComplemento
+        public List<Complemento> ListaComplemento
         {
             get { return listaComplemento; }
             set { listaComplemento = value; }
+        }
+
+        public string ComplementosFormatados
+        {
+            get { return complementosFormatados; }
+            set { complementosFormatados = value; }
         }
     }
 }

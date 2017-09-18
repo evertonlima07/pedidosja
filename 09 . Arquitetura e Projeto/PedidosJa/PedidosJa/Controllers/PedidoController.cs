@@ -19,10 +19,34 @@ namespace PedidosJa.Controllers
             return View(listaPedidos);
         }
 
-        //DETALHE PARA EMPRESA
-        public ActionResult VerPedidoEmpresa()
+        public ActionResult AlterarStatusPedido(int id)
         {
-            return View();
+            GerenciadoraPedido gp = new GerenciadoraPedido();
+            Pedido pedido = gp.Obter(ped => ped.Id == id);
+            pedido.Situacao = "Feito";
+            gp.Editar(pedido);
+
+            return RedirectToAction("ListaDePedidos");
+        }
+
+        //DETALHE PARA EMPRESA
+        public ActionResult VerPedidoEmpresa(int id)
+        {
+            GerenciadoraPedido gp = new GerenciadoraPedido();
+            Pedido pedido = gp.Obter(p => p.Id == id);
+
+            MontarResumoDeComplementos(pedido);
+
+            return View(pedido);
+        }
+
+        public void MontarResumoDeComplementos(Pedido pedido)
+        {
+            ProdutoController pc = new ProdutoController();
+            foreach (var produto in pedido.ListaProdutos)
+            {
+                pc.FormatarComplementos(produto);
+            }
         }
     }
 }

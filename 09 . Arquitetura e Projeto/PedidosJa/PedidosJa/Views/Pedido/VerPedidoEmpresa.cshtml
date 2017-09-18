@@ -1,7 +1,84 @@
-﻿
+﻿@model Model.Models.Pedido
+
 @{
-    ViewBag.Title = "VerPedidoEmpresa";
+    ViewBag.Title = "Ver Pedido";
 }
 
-<h2>VerPedidoEmpresa</h2>
+<h2>Ver Pedido</h2>
 
+<div>
+    <h4>Pedido @Model.Id.ToString().PadLeft(5, '0')</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            Nome: 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeUsuario)
+        </dd>
+
+        <dt>
+            Telefone:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelefoneUsuario)
+        </dd>
+
+        <dt>
+            Endereço:
+        </dt>
+
+        <dd>
+            @Html.DisplayTextFor(model => model.EnderecoUsuario)
+        </dd>
+
+        <dt>
+            Desc. do Pagamento:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoPagamento)
+        </dd>
+
+        <dt>
+            Situação do Pedido:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Situacao)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <p>
+        @{if (String.Compare(Model.Situacao, "Feito") != 0) { 
+                @Html.ActionLink("Marcar pedido como FEITO", "AlterarStatusPedido/" + Model.Id)        
+            }
+        }
+    </p>
+</div>
+
+@{
+    WebGrid produtos = new WebGrid(source: Model.ListaProdutos, canPage: true, canSort: true);
+    @produtos.GetHtml(
+        caption: "Itens do Pedido",
+        displayHeader: true,
+        fillEmptyRows: true,
+        emptyRowCellValue: "---",
+        mode: WebGridPagerModes.All,
+        numericLinksCount: 2,
+        tableStyle: "table",
+        columns: produtos.Columns(
+            produtos.Column("Nome", "Produto"),
+            produtos.Column("ComplementosFormatados", "Complemento(s)")
+            )
+    );
+}
+
+<p>
+    @Html.ActionLink("Voltar à Lista de Pedidos", "ListaDePedidos")
+</p>

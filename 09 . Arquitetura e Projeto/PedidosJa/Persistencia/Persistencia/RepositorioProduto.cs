@@ -23,11 +23,8 @@ namespace Persistencia.Persistencia
             produto1.Nome = "Coca Cola 1L";
             produto1.Preco = 5.20f;
             produto1.Empresa = re.ObterTodos()[0];
-            produto1.ListaComplemento = new List<ProdutoComplemento>();
-            ProdutoComplemento pc = new ProdutoComplemento();
-            pc.Produto = produto1;
-            pc.Complemento = rc.ObterTodos()[1];
-            produto1.ListaComplemento.Add(pc);
+            produto1.ListaComplemento = new List<Complemento>();
+            produto1.ListaComplemento.Add(rc.ObterTodos()[1]);
             listaProduto.Add(produto1);
 
             Produto produto2 = new Produto();
@@ -35,7 +32,7 @@ namespace Persistencia.Persistencia
             produto2.Nome = "X Frango";
             produto2.Preco = 8.00f;
             produto2.Empresa = re.ObterTodos()[0];
-            produto2.ListaComplemento = new List<ProdutoComplemento>();
+            produto2.ListaComplemento = new List<Complemento>();
             listaProduto.Add(produto2);
         }
 
