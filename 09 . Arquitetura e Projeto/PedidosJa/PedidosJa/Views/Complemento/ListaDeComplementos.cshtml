@@ -9,24 +9,24 @@
 <p>
     @Html.ActionLink("Novo Complemento", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Descricao)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descricao)
-        </td>
-        <td>
-            @Html.ActionLink("Alterar", "Alterar", new { id=item.Id }) |
-            @Html.ActionLink("Remover", "Remover", new { id=item.Id })
-        </td>
-    </tr>
+@{
+    WebGrid complementos = new WebGrid(source: Model, canPage: true, canSort: true);
+    @complementos.GetHtml(
+         displayHeader: true,
+         fillEmptyRows: true,
+         emptyRowCellValue: "---",
+         mode: WebGridPagerModes.All,
+         numericLinksCount: 2,
+         tableStyle: "table",
+         columns: complementos.Columns(
+             complementos.Column("Descricao", "Descrição"),
+             complementos.Column(null, null, canSort: false,
+                format: (item) => new HtmlString(String.Format("{0} | {1}", new object[] {
+                    Html.ActionLink("Alterar", "Alterar", new { id=item.Id }).ToString(),
+                    Html.ActionLink("Remover", "Remover", new { id=item.Id }).ToString()
+                }))
+              )
+            )
+    );
 }
-
-</table>

@@ -9,30 +9,25 @@
 <p>
     @Html.ActionLink("Novo Produto", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            Nome
-        </th>
-        <th>
-            Preço (R$)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Preco)
-        </td>
-        <td>
-            @Html.ActionLink("Alterar", "Alterar", new { id=item.Id }) |
-            @Html.ActionLink("Remover", "Remover", new { id=item.Id })
-        </td>
-    </tr>
-}
-
-</table>
+    @{
+        WebGrid produtos = new WebGrid(source: Model, canPage: true, canSort: true);
+        @produtos.GetHtml(
+         displayHeader: true,
+         fillEmptyRows: true,
+         emptyRowCellValue: "---",
+         mode: WebGridPagerModes.All,
+         numericLinksCount: 2,
+         tableStyle: "table",
+         columns: produtos.Columns(
+             produtos.Column("Nome", "Nome"),
+             produtos.Column("Preco", "Preço"),
+             produtos.Column(null, null, canSort: false,
+                format: (item) => new HtmlString(String.Format("{0} | {1}", new object[] {
+                    Html.ActionLink("Alterar", "Alterar", new { id=item.Id }).ToString(),
+                    Html.ActionLink("Remover", "Remover", new { id=item.Id }).ToString()
+                }))
+              )
+            )
+    );
+    }
