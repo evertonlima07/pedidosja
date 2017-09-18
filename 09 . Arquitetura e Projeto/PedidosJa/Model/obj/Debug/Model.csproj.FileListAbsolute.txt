@@ -8,3 +8,9 @@ C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Model\bin
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Model\obj\Debug\Model.dll
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Model\obj\Debug\Model.pdb
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Model\bin\Debug\Model.dll
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Model\bin\Debug\Model.pdb
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Model\obj\Debug\Model.dll
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Model\obj\Debug\Model.pdb

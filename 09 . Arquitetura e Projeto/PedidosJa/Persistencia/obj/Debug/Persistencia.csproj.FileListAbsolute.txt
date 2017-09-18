@@ -12,3 +12,11 @@ C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Persisten
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Persistencia\bin\Debug\Model.dll
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Persistencia\bin\Debug\Model.pdb
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Persistencia\obj\Debug\Persistencia.pdb

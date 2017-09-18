@@ -16,3 +16,13 @@ C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Negocio\b
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Negocio\obj\Debug\Negocio.dll
 C:\Users\Daniel\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Negocio\obj\Debug\Negocio.pdb
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Negocio\bin\Debug\Negocio.dll
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Negocio\bin\Debug\Negocio.pdb
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Negocio\bin\Debug\Model.dll
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Negocio\bin\Debug\Persistencia.dll
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Negocio\bin\Debug\Model.pdb
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Negocio\bin\Debug\Persistencia.pdb
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Negocio\obj\Debug\Negocio.dll
+C:\Users\evert\Desktop\pedidosja\09 . Arquitetura e Projeto\PedidosJa\Negocio\obj\Debug\Negocio.pdb
