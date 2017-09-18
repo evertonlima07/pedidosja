@@ -202,11 +202,8 @@
     <Content Include="Views\Complemento\SelecionarComplementosAlterarProduto.cshtml" />
     <Content Include="Views\Complemento\Create.cshtml" />
     <Content Include="Views\Complemento\Alterar.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Shared\Menu\MenuUsuario.cshtml" />
-=======
     <Content Include="Views\Pedido\VerPedidoEmpresa.cshtml" />
->>>>>>> e264f371aa1e93f2f863a8cb9d87a7e50e593e3c
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
