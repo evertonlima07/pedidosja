@@ -34,7 +34,11 @@ namespace PedidosJa.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    novoProduto.ListaComplemento = new List<ProdutoComplemento>();
+                    novoProduto.ListaComplemento = new List<Complemento>();
+                    novoProduto.Empresa = (Empresa)Util.SessionHelper.Get(Util.SessionKeys.EMPRESA);
+
+                    GerenciadoraProduto gp = new GerenciadoraProduto();
+                    novoProduto = gp.Adicionar(novoProduto);
                     Util.SessionHelper.Set(Util.SessionKeys.PRODUTO,novoProduto);
                     
                     return RedirectToAction("SelecionarComplementosNovoProduto","Complemento");
@@ -46,18 +50,6 @@ namespace PedidosJa.Controllers
             }
             
             return View();
-        }
-
-        public ActionResult ProcessaAdicionarProduto()
-        {
-            Produto produto = (Produto) Util.SessionHelper.Get(Util.SessionKeys.PRODUTO);
-            GerenciadoraProduto gp = new GerenciadoraProduto();
-            produto.Empresa = (Empresa) Util.SessionHelper.Get(Util.SessionKeys.EMPRESA);
-            gp.Adicionar(produto);
-
-            Util.SessionHelper.Set(Util.SessionKeys.PRODUTO,null);
-
-            return RedirectToAction("ListaDeProdutos", "Produto");
         }
 
         public ActionResult Remover(int id)
@@ -87,6 +79,16 @@ namespace PedidosJa.Controllers
 
             Util.SessionHelper.Set(Util.SessionKeys.PRODUTO, prodAlt);
             return RedirectToAction("SelecionarComplementosAlterarProduto", "Complemento");
+        }
+
+        public void FormatarComplementos(Produto produto)
+        {
+            string linha = "";
+            foreach (var comp in produto.ListaComplemento)
+            {
+                linha = comp.Descricao + " | ";
+            }
+            produto.ComplementosFormatados = linha;
         }
     }
 }

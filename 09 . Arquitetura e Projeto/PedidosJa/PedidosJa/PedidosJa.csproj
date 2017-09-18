@@ -193,7 +193,6 @@
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Home\Usuario.cshtml" />
     <Content Include="Views\Pedido\ListaDePedidos.cshtml" />
-    <Content Include="Views\Pedido\VerPedidoEmpresa.cshtml" />
     <Content Include="Views\Produto\ListaDeProdutos.cshtml" />
     <Content Include="Views\Produto\Create.cshtml" />
     <Content Include="Views\Complemento\SelecionarComplementosNovoProduto.cshtml" />
@@ -202,6 +201,7 @@
     <Content Include="Views\Complemento\SelecionarComplementosAlterarProduto.cshtml" />
     <Content Include="Views\Complemento\Create.cshtml" />
     <Content Include="Views\Complemento\Alterar.cshtml" />
+    <Content Include="Views\Pedido\VerPedidoEmpresa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

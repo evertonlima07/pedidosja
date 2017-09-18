@@ -16,7 +16,8 @@ namespace Model.Models
         private string nomeUsuario;
         private string situacao; //feito / a fazer
         private Usuario usuario;
-        private List<ProdutoPedido> listaProdutos;
+        private List<Produto> listaProdutos;
+        private DateTime data;
 
         public int Id
         {
@@ -66,10 +67,17 @@ namespace Model.Models
             set { usuario = value; }
         }
 
-        public List<ProdutoPedido> ListaProdutos
+        public List<Produto> ListaProdutos
         {
             get { return listaProdutos; }
             set { listaProdutos = value; }
         }
+
+        public DateTime Data
+        {
+            get { return data; }
+            set { data = value; }
+        }
+
     }
 }

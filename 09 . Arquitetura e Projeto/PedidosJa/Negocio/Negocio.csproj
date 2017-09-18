@@ -45,8 +45,6 @@
     <Compile Include="Business\GerenciadoraEmpresa.cs" />
     <Compile Include="Business\GerenciadoraPedido.cs" />
     <Compile Include="Business\GerenciadoraProduto.cs" />
-    <Compile Include="Business\GerenciadoraProdutoComplemento.cs" />
-    <Compile Include="Business\GerenciadoraProdutoPedido.cs" />
     <Compile Include="Business\GerenciadoraUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

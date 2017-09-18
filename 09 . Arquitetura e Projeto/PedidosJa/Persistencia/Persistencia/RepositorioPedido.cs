@@ -27,8 +27,11 @@ namespace Persistencia.Persistencia
             pedido1.TelefoneUsuario = "79 998397106";
             pedido1.NomeUsuario = "Daniel Lima";
             pedido1.Situacao = "A fazer";
+            pedido1.ListaProdutos = new List<Produto>();
             pedido1.Usuario = ru.ObterTodos()[0];
-
+            RepositorioProduto rp = new RepositorioProduto();
+            pedido1.ListaProdutos.Add(rp.ObterTodos()[0]);
+            pedido1.Data = DateTime.Now;
             listaPedido.Add(pedido1);
             
             Pedido pedido2 = new Pedido();
@@ -40,7 +43,8 @@ namespace Persistencia.Persistencia
             pedido2.NomeUsuario = "Daniel Lima";
             pedido2.Situacao = "A fazer";
             pedido2.Usuario = ru.ObterTodos()[0];
-            
+            pedido2.Data = DateTime.Now;
+
             listaPedido.Add(pedido2);
             
         }
