@@ -43,6 +43,7 @@
     <Compile Include="Persistencia\RepositorioComplemento.cs" />
     <Compile Include="Persistencia\RepositorioComplementoPedido.cs" />
     <Compile Include="Persistencia\RepositorioEmpresa.cs" />
+    <Compile Include="Persistencia\RepositorioEndereco.cs" />
     <Compile Include="Persistencia\RepositorioPedido.cs" />
     <Compile Include="Persistencia\RepositorioProduto.cs" />
     <Compile Include="Persistencia\RepositorioUsuario.cs" />

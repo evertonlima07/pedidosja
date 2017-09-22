@@ -21,15 +21,10 @@ namespace PedidosJa.Controllers
 
         public ActionResult Usuario()
         {
-            //ESSE CÓDIGO SERÁ USADO NO LOGIN
-            Usuario user = new Usuario();
-            user.Id = 1;
-            user.Nome = "Daniel Lima Oliveira";
-            user.Endereco = "Rua Francisco Oliveira, 2423";
-            user.Email = "daniel102510@hotmail.com";
-            user.Login = "daniel102510";
-            user.Senha = "daniel@123";
+            GerenciadoraUsuario gu = new GerenciadoraUsuario();
 
+            //ESSE CÓDIGO SERÁ USADO NO LOGIN
+            Usuario user = gu.ObterTodos()[0];
             SessionHelper.Set(SessionKeys.TIPO_USER, "Usuario");
             SessionHelper.Set(SessionKeys.USUARIO, user);
             //

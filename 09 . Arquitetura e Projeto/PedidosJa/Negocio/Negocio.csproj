@@ -43,6 +43,7 @@
     <Compile Include="Business\GerenciadoraComplemento.cs" />
     <Compile Include="Business\GerenciadoraComplementoPedido.cs" />
     <Compile Include="Business\GerenciadoraEmpresa.cs" />
+    <Compile Include="Business\GerenciadoraEndereco.cs" />
     <Compile Include="Business\GerenciadoraPedido.cs" />
     <Compile Include="Business\GerenciadoraProduto.cs" />
     <Compile Include="Business\GerenciadoraUsuario.cs" />

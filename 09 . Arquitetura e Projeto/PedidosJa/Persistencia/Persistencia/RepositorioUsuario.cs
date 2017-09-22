@@ -17,8 +17,7 @@ namespace Persistencia.Persistencia
 
             Usuario usuario1 = new Usuario();
             usuario1.Id = 1;
-            usuario1.Nome = "Daniel Lima";
-            usuario1.Endereco = "Rua Francisco Oliveira";
+            usuario1.Nome = "Daniel Lima";            
             usuario1.Email = "daniel102510@hotmail.com";
             usuario1.Login = "daniellima";
             usuario1.Senha = "daniellima";

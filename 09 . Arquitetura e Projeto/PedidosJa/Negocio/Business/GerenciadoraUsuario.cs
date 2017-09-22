@@ -12,7 +12,7 @@ namespace Negocio.Business
     {
         RepositorioUsuario repositorioCliente;
 
-        GerenciadoraUsuario()
+        public GerenciadoraUsuario()
         {
             repositorioCliente = new RepositorioUsuario();
         }

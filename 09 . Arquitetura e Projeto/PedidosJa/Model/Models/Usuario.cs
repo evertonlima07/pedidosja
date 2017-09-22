@@ -10,7 +10,6 @@ namespace Model.Models
     {
         private int id;
         private string nome;
-        private string endereco;
         private string email;
         private string login;
         private string senha;
@@ -26,12 +25,6 @@ namespace Model.Models
         {
             get { return nome; }
             set { nome = value; }
-        }
-
-        public string Endereco
-        {
-            get { return endereco; }
-            set { endereco = value; }
         }
 
         public string Email

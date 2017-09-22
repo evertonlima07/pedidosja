@@ -44,6 +44,7 @@
     <Compile Include="Models\Complemento.cs" />
     <Compile Include="Models\ComplementoPedido.cs" />
     <Compile Include="Models\Empresa.cs" />
+    <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\Usuario.cs" />
