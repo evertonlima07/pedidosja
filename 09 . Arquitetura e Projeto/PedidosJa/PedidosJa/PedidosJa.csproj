@@ -149,6 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ComplementoController.cs" />
+    <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PedidoController.cs" />
@@ -211,6 +212,8 @@
     <Content Include="Views\Complemento\Alterar.cshtml" />
     <Content Include="Views\Pedido\VerPedidoEmpresa.cshtml" />
     <Content Include="Views\Usuario\Alterar.cshtml" />
+    <Content Include="Views\Empresa\ListaDeEmpresas.cshtml" />
+    <Content Include="Views\Empresa\ListaDeProdutosEmpresa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

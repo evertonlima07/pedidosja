@@ -18,6 +18,7 @@ namespace Persistencia.Persistencia
             Empresa empresa1 = new Empresa();
             empresa1.Id = 1;
             empresa1.Nome = "Itatech Jr.";
+            empresa1.Endereco = "Rua A";
             empresa1.Telefone = "79998397106";
             empresa1.Login = "itetech";
             empresa1.Senha = "itatech";
@@ -28,6 +29,7 @@ namespace Persistencia.Persistencia
             Empresa empresa2 = new Empresa();
             empresa2.Id = 2;
             empresa2.Nome = "Daniel Tech";
+            empresa2.Endereco = "Rua B";
             empresa2.Telefone = "79998397106";
             empresa2.Login = "daniel";
             empresa2.Senha = "daniel";

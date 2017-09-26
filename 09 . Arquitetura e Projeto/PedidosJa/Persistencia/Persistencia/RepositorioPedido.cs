@@ -36,12 +36,15 @@ namespace Persistencia.Persistencia
             
             Pedido pedido2 = new Pedido();
             pedido2.Id = 2;
-            pedido2.Empresa = re.ObterTodos()[1];
+            pedido2.Empresa = re.ObterTodos()[0];
             pedido2.EnderecoUsuario = "Rua Quintino de Lacerda";
             pedido2.DescricaoPagamento = "Cartão";
             pedido2.TelefoneUsuario = "79 998397106";
             pedido2.NomeUsuario = "Daniel Lima";
             pedido2.Situacao = "A fazer";
+            pedido2.ListaProdutos = new List<Produto>();
+            pedido2.Usuario = ru.ObterTodos()[0];
+            RepositorioProduto rp2 = new RepositorioProduto();
             pedido2.Usuario = ru.ObterTodos()[0];
             pedido2.Data = DateTime.Now;
 

@@ -22,15 +22,13 @@ namespace PedidosJa.Controllers
         public ActionResult Usuario()
         {
             GerenciadoraUsuario gu = new GerenciadoraUsuario();
-
+            
             //ESSE CÓDIGO SERÁ USADO NO LOGIN
             Usuario user = gu.ObterTodos()[0];
             SessionHelper.Set(SessionKeys.TIPO_USER, "Usuario");
             SessionHelper.Set(SessionKeys.USUARIO, user);
-            //
-
-            ViewBag.Title = "Home";
-            return View();
+            
+            return RedirectToAction("ListaDeEmpresas", "Empresa");
         }
 
         public ActionResult Empresa()
@@ -42,7 +40,6 @@ namespace PedidosJa.Controllers
 
             SessionHelper.Set(SessionKeys.TIPO_USER, "Empresa");
             SessionHelper.Set(SessionKeys.EMPRESA, empresa);
-            //
 
             return RedirectToAction("ListaDePedidos", "Pedido");
         }
