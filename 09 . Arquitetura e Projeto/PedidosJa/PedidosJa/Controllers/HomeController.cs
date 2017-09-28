@@ -26,8 +26,7 @@ namespace PedidosJa.Controllers
 
         public ActionResult Usuario()
         {
-            
-            return View();
+            return RedirectToAction("ListaDeEmpresas", "Empresa");
         }
 
         public ActionResult Empresa()

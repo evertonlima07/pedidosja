@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Model.Models.Empresa>
+
+@{
+    ViewBag.Title = "Lista De Empresas";
+}
+
+<h2>Lista De Empresas</h2>
+@{
+    WebGrid empresas = new WebGrid(source: Model, canPage: true, canSort: true);
+    @empresas.GetHtml(
+        displayHeader: true,
+        fillEmptyRows: true,
+        emptyRowCellValue: "---",
+        mode: WebGridPagerModes.All,
+        numericLinksCount: 2,
+        tableStyle: "table",
+        columns: empresas.Columns(
+            empresas.Column("nome", "Nome"),
+            empresas.Column("endereco", "Endereço"),
+            empresas.Column("telefone", "Telefone"),
+            empresas.Column(null, null, canSort: false,
+                format: (item) => new HtmlString(String.Format("{0}", new object[] {
+                    Html.ActionLink("Iniciar Pedido", "ListaDeProdutosEmpresa", new { id = item.Id }).ToString()
+                }))
+            )
+        )
+    );
+}

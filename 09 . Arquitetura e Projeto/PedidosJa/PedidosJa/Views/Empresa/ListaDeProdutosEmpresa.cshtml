@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Lista De Produtos Por Empresa";
+}
+
+<h2>Lista De Produtos Por Empresa</h2>
+@{
+    WebGrid produtos = new WebGrid(source: Model, canPage: true, canSort: true);
+    @produtos.GetHtml(
+         displayHeader: true,
+         fillEmptyRows: true,
+         emptyRowCellValue: "---",
+         mode: WebGridPagerModes.All,
+         numericLinksCount: 2,
+         tableStyle: "table",
+         columns: produtos.Columns(
+             produtos.Column("Nome", "Nome"),
+             produtos.Column("Preco", "Preço"),
+             produtos.Column(null, null, canSort: false,
+                format: (item) => new HtmlString(String.Format("{0} | {1}", new object[] {
+                    Html.ActionLink("Adicionar", "Adicionar", new { id=item.Id }).ToString(),
+                    Html.ActionLink("Remover", "Remover", new { id=item.Id }).ToString()
+                }))
+             )
+         )
+    );
+}
