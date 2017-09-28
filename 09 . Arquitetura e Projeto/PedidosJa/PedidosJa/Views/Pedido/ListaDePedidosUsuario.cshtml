@@ -6,9 +6,9 @@
 
 <h2>Lista de Pedidos</h2>
 
-    @{
-        WebGrid pedidos = new WebGrid(source: Model, canPage: true, canSort: true);
-        @pedidos.GetHtml(
+@{
+    WebGrid pedidos = new WebGrid(source: Model, canPage: true, canSort: true);
+    @pedidos.GetHtml(
          displayHeader: true,
          fillEmptyRows: true,
          emptyRowCellValue: "---",
@@ -22,11 +22,11 @@
              pedidos.Column("NomeUsuario", "Nome do cliente"),
              pedidos.Column("Situacao", "Situação"),
              pedidos.Column("Data", "Data do pedido"),
-             pedidos.Column(null,null, canSort: false,
+             pedidos.Column(null, null, canSort: false,
                 format: (item) => new HtmlString(String.Format("{0}", new object[] {
-                    Html.ActionLink("Detalhe do Pedido", "VerPedidoEmpresa", new { id = item.Id }).ToString()
+                    Html.ActionLink("Detalhe do Pedido", "VerPedidoUsuario", new { id = item.Id }).ToString()
                 }))
               )
             )
     );
-    }
+}

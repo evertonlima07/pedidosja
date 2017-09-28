@@ -14,26 +14,6 @@ namespace Persistencia.Persistencia
         static RepositorioProduto()
         {
             listaProduto = new List<Produto>();
-
-            RepositorioEmpresa re = new RepositorioEmpresa();
-            RepositorioComplemento rc = new RepositorioComplemento();
-
-            Produto produto1 = new Produto();
-            produto1.Id = 1;
-            produto1.Nome = "Coca Cola 1L";
-            produto1.Preco = 5.20f;
-            produto1.Empresa = re.ObterTodos()[0];
-            produto1.ListaComplemento = new List<Complemento>();
-            produto1.ListaComplemento.Add(rc.ObterTodos()[1]);
-            listaProduto.Add(produto1);
-
-            Produto produto2 = new Produto();
-            produto2.Id = 2;
-            produto2.Nome = "X Frango";
-            produto2.Preco = 8.00f;
-            produto2.Empresa = re.ObterTodos()[0];
-            produto2.ListaComplemento = new List<Complemento>();
-            listaProduto.Add(produto2);
         }
 
         public Produto Adicionar(Produto produto)

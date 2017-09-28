@@ -12,7 +12,7 @@ namespace Negocio.Business
     {
         RepositorioEndereco repositorioEndereco;
 
-        GerenciadoraEndereco()
+        public GerenciadoraEndereco()
         {
             repositorioEndereco = new RepositorioEndereco();
         }
@@ -35,6 +35,11 @@ namespace Negocio.Business
         public Endereco Obter(Func<Endereco, bool> where)
         {
             return repositorioEndereco.Obter(where);
+        }
+
+        public List<Endereco> ObterPorUsuario(Func<Endereco, bool> where)
+        {
+            return repositorioEndereco.ObterPorUsuario(where);
         }
 
         public List<Endereco> ObterTodos()

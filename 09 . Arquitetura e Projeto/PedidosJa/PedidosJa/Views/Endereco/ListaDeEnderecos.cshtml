@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Model.Models.Endereco>
+
+@{
+    ViewBag.Title = "Meus Endereços";
+}
+
+<h2>Meus Endereços</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar Novo Endereço", "Create")
+</p>
+@{
+    WebGrid pedidos = new WebGrid(source: Model, canPage: true, canSort: true);
+    @pedidos.GetHtml(
+         displayHeader: true,
+         fillEmptyRows: true,
+         emptyRowCellValue: "---",
+         mode: WebGridPagerModes.All,
+         numericLinksCount: 2,
+         tableStyle: "table",
+         columns: pedidos.Columns(
+             pedidos.Column("Nome", "Logradouro"),
+             pedidos.Column("Numero", "Número"),
+             pedidos.Column("Cep", "Cep"),
+             pedidos.Column("Complemento", "Complemento"),
+             pedidos.Column("Apelido", "Apelido"),
+             pedidos.Column(null, null, canSort: false,
+                format: (item) => new HtmlString(String.Format("{0} | {1}", new object[] {
+                    Html.ActionLink("Alterar", "Alterar", new { id = item.Id }).ToString(),
+                    Html.ActionLink("Remover", "Remover", new { id = item.Id }).ToString()
+                }))
+              )
+            )
+    );
+}
+
+</table>

@@ -14,7 +14,17 @@ namespace PedidosJa.Controllers
         {
             GerenciadoraPedido rp = new GerenciadoraPedido();
             Empresa empresa = (Empresa) Util.SessionHelper.Get(Util.SessionKeys.EMPRESA);
-            List<Pedido> listaPedidos = rp.ObterPorEmpresa(p => p.Empresa.Id == empresa.Id);
+            List<Pedido> listaPedidos = rp.ObterPedidos(p => p.Empresa.Id == empresa.Id);
+            int t = rp.ObterTodos().Count;
+            return View(listaPedidos);
+        }
+        
+        // GET: Pedido
+        public ActionResult ListaDePedidosUsuario()
+        {
+            GerenciadoraPedido rp = new GerenciadoraPedido();
+            Usuario usuario = (Usuario)Util.SessionHelper.Get(Util.SessionKeys.USUARIO);
+            List<Pedido> listaPedidos = rp.ObterPedidos(p => p.Usuario.Id == usuario.Id);
 
             return View(listaPedidos);
         }
@@ -31,6 +41,17 @@ namespace PedidosJa.Controllers
 
         //DETALHE PARA EMPRESA
         public ActionResult VerPedidoEmpresa(int id)
+        {
+            GerenciadoraPedido gp = new GerenciadoraPedido();
+            Pedido pedido = gp.Obter(p => p.Id == id);
+
+            MontarResumoDeComplementos(pedido);
+
+            return View(pedido);
+        }
+
+        //DETALHE PARA USUARIO
+        public ActionResult VerPedidoUsuario(int id)
         {
             GerenciadoraPedido gp = new GerenciadoraPedido();
             Pedido pedido = gp.Obter(p => p.Id == id);

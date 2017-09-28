@@ -14,18 +14,6 @@ namespace Persistencia.Persistencia
         static RepositorioEndereco()
         {
             listaEndereco = new List<Endereco>();
-
-            RepositorioUsuario ru = new RepositorioUsuario();
-
-            Endereco endereco = new Endereco();
-            endereco.Id = 1;
-            endereco.Nome = "Rua Francisco Oliveira";
-            endereco.Numero = "2723";
-            endereco.Cep = "49500000";
-            endereco.Complemento = "";
-            endereco.Apelido = "Minha casa";
-            endereco.Usuario = ru.ObterTodos()[0];
-            listaEndereco.Add(endereco);
         }
 
         public Endereco Adicionar(Endereco endereco)
@@ -50,6 +38,11 @@ namespace Persistencia.Persistencia
         public Endereco Obter(Func<Endereco, bool> where)
         {
             return listaEndereco.Where(where).FirstOrDefault();
+        }
+
+        public List<Endereco> ObterPorUsuario(Func<Endereco, bool> where)
+        {
+            return listaEndereco.Where(where).ToList();
         }
 
         public List<Endereco> ObterTodos()

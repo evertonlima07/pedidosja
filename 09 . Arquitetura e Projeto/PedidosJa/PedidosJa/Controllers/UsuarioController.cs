@@ -29,7 +29,7 @@ namespace PedidosJa.Controllers
             usuario.Telefone = user.Telefone;
             gu.Editar(usuario);
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Usuario", "Home");
         }
     }
 }

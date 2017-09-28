@@ -37,9 +37,9 @@ namespace Negocio.Business
             return repositorioPedido.Obter(where);
         }
 
-        public List<Pedido> ObterPorEmpresa(Func<Pedido, bool> where)
+        public List<Pedido> ObterPedidos(Func<Pedido, bool> where)
         {
-            return repositorioPedido.ObterPorEmpresa(where);
+            return repositorioPedido.ObterPedidos(where);
         }
 
         public List<Pedido> ObterTodos()
