@@ -28,5 +28,11 @@ namespace PedidosJa.Controllers
 
             return View(listaProdutoEmpresa);
         }
+
+        public ActionResult IniciarPedido(int id)
+        {
+            int idEmpresa = id;
+            return RedirectToAction("IniciarPedido","Pedido", new { id = idEmpresa });
+        }
     }
 }

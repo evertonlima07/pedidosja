@@ -40,7 +40,7 @@ namespace Persistencia.Persistencia
             return listaProduto.Where(where).FirstOrDefault();
         }
 
-        public List<Produto> ObterTodosDaEmpresa(Func<Produto, bool> where)
+        public List<Produto> ObterPorEmpresa(Func<Produto, bool> where)
         {
             return listaProduto.Where(where).ToList();
         }

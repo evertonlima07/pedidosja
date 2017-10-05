@@ -49,18 +49,18 @@ namespace PedidosJa.Controllers
             Empresa empresa1 = new Empresa();
             empresa1.Nome = "Itatech Jr.";
             empresa1.Telefone = "79998397106";
-            empresa1.Login = "itatechjr";
-            empresa1.Senha = "ita";
-            empresa1.Funcionamento = "ABERTO";
+            empresa1.Login = "itatech";
+            empresa1.Senha = "itatech";
+            empresa1.Funcionamento = "FECHADO";
             
             gEmp.Adicionar(empresa1);
 
             Empresa empresa2 = new Empresa();
             empresa2.Nome = "Daniel Tech";
             empresa2.Telefone = "79998397106";
-            empresa2.Login = "daniel";
-            empresa2.Senha = "daniel";
-            empresa2.Funcionamento = "ABERTO";
+            empresa2.Login = "danieltech";
+            empresa2.Senha = "danieltech";
+            empresa2.Funcionamento = "FECHADO";
 
             gEmp.Adicionar(empresa2);
 
@@ -68,8 +68,8 @@ namespace PedidosJa.Controllers
             Usuario usuario1 = new Usuario();
             usuario1.Nome = "Daniel Lima";
             usuario1.Email = "daniel102510@hotmail.com";
-            usuario1.Login = "daniellima";
-            usuario1.Senha = "daniellima";
+            usuario1.Login = "daniel";
+            usuario1.Senha = "daniel";
             usuario1.Telefone = "79 998397106";
 
             gUser.Adicionar(usuario1);

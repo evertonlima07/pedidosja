@@ -5,7 +5,7 @@ using System.Web;
 
 namespace PedidosJa.Util
 {
-    public enum SessionKeys { TIPO_USER, USUARIO, EMPRESA, PRODUTO}
+    public enum SessionKeys { TIPO_USER, USUARIO, EMPRESA, PRODUTO, PEDIDO}
 
     public class SessionHelper
     {

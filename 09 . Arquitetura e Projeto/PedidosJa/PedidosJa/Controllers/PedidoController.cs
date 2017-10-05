@@ -69,5 +69,25 @@ namespace PedidosJa.Controllers
                 pc.FormatarComplementos(produto);
             }
         }
+
+        public ActionResult IniciarPedido(int id)
+        {
+            GerenciadoraEmpresa ge = new GerenciadoraEmpresa();
+            GerenciadoraPedido gp = new GerenciadoraPedido();
+
+            Empresa empresa = ge.Obter(e => e.Id == id);
+            Usuario usuario = (Usuario) Util.SessionHelper.Get(Util.SessionKeys.USUARIO);
+
+            Pedido pedido = new Pedido();
+            pedido.ListaProdutos = new List<Produto>();
+            pedido.Usuario = usuario;
+            pedido.NomeUsuario = usuario.Nome;
+            pedido.TelefoneUsuario = usuario.Telefone;
+            pedido.Empresa = empresa;
+
+            Util.SessionHelper.Set(Util.SessionKeys.PEDIDO, pedido);
+
+            return RedirectToAction("SelecionarProdutoPedido", "Produto");
+        }
     }
 }

@@ -18,9 +18,10 @@
             empresas.Column("nome", "Nome"),
             empresas.Column("endereco", "Endereço"),
             empresas.Column("telefone", "Telefone"),
+            empresas.Column("funcionamento","Funcionamento"),
             empresas.Column(null, null, canSort: false,
                 format: (item) => new HtmlString(String.Format("{0}", new object[] {
-                    Html.ActionLink("Iniciar Pedido", "ListaDeProdutosEmpresa", new { id = item.Id }).ToString()
+                    Html.ActionLink("Iniciar Pedido", "IniciarPedido", new { id = item.Id }).ToString()
                 }))
             )
         )
