@@ -43,6 +43,11 @@ namespace Persistencia.Persistencia
             return listaComplemento.Where(where).ToList();
         }
 
+        public List<Complemento> ObterWhere(Func<Complemento, bool> where)
+        {
+            return listaComplemento.Where(where).ToList();
+        }
+
         public List<Complemento> ObterTodos()
         {
             return listaComplemento;

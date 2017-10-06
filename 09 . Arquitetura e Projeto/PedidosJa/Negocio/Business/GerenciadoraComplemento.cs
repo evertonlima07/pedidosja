@@ -42,6 +42,11 @@ namespace Negocio.Business
             return repositorioComplemento.ObterPorEmpresa(where);
         }
 
+        public List<Complemento> ObterWhere(Func<Complemento, bool> where)
+        {
+            return repositorioComplemento.ObterWhere(where);
+        }
+
         public List<Complemento> ObterTodos()
         {
             return repositorioComplemento.ObterTodos();

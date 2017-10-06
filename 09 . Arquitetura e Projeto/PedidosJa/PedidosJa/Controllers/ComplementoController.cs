@@ -143,12 +143,41 @@ namespace PedidosJa.Controllers
 
             return RedirectToAction("ListaDeComplementos");
         }
-        /*
+        
         public ActionResult SelecionarComplementosPedido()
         {
+            GerenciadoraProduto gp = new GerenciadoraProduto();
 
+            Produto produtoAtual = (Produto)Util.SessionHelper.Get(Util.SessionKeys.PRODUTO);
+            Produto produtoBanco = gp.Obter(p => p.Id == produtoAtual.Id);
+
+            if (produtoBanco.ListaComplemento.Count == 0) return RedirectToAction("SelecionarProdutoPedido", "Produto");
+
+            return View(produtoBanco.ListaComplemento);
         }
-        */
+
+        [HttpPost]
+        public ActionResult SelecionarComplementosPedido(FormCollection form)
+        {
+            if (form["Complemento"] == null) return RedirectToAction("SelecionarProdutoPedido", "Produto");
+
+            GerenciadoraProduto gp = new GerenciadoraProduto();
+            String[] lista = form["Complemento"].Split(',');
+            Produto atual = (Produto)Util.SessionHelper.Get(Util.SessionKeys.PRODUTO);
+            GerenciadoraComplemento gc = new GerenciadoraComplemento();
+            if (lista != null)
+            {
+                foreach (var comp in lista)
+                {
+                    Complemento complemento = gc.Obter(c => c.Id == Convert.ToInt32(comp.ToString()));
+
+                    atual.ListaComplemento.Add(complemento);
+                }
+            }
+            
+            return RedirectToAction("SelecionarProdutoPedido", "Produto");
+        }
+
     }
 
 }

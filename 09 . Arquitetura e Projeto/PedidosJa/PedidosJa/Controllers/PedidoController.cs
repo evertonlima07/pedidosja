@@ -105,7 +105,9 @@ namespace PedidosJa.Controllers
             Pedido pedidoAtual = (Pedido) Util.SessionHelper.Get(Util.SessionKeys.PEDIDO);
             pedidoAtual.ListaProdutos.Add(novo);
 
-            return RedirectToAction("SelecionarProdutoPedido", "Produto");
+            Util.SessionHelper.Set(Util.SessionKeys.PRODUTO, novo);
+
+            return RedirectToAction("SelecionarComplementosPedido", "Complemento");
         }
 
     }
