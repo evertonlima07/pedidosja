@@ -1,10 +1,22 @@
 ﻿@model IEnumerable<Model.Models.Produto>
 
 @{
-    ViewBag.Title = "Selecionar Produtos";
+    ViewBag.Title = "Resumo do Pedido";
 }
 
-<h2>Selecionar Produtos</h2>
+<h2>Resumo do Pedido</h2>
+
+<p>
+    @Html.ActionLink("Voltar para lista de produtos", "SelecionarProdutoPedido")
+</p>
+
+<p>
+    @Html.ActionLink("Finalizar Pedido", "SelecionarProdutoPedido")
+</p>
+
+<p>
+    TOTAL (R$) : @ViewBag.Total
+</p>
 
 <table class="table">
     <tr>
@@ -12,7 +24,7 @@
             @Html.DisplayNameFor(model => model.Nome)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Preco)
+            Preço Unit. (R$)
         </th>
         <th></th>
     </tr>
@@ -25,13 +37,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Preco)
         </td>
-        <td>
-            @Html.ActionLink("Adicionar ao pedido", "AdicionarProdutoAoPedido", "Pedido", new { id=item.Id },null)
-        </td>
     </tr>
 }
 
 </table>
-
-
-@ViewBag.QntdItens Itens no Carrinho - @Html.ActionLink("Ver Resumo", "VerResumo", "Pedido")

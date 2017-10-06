@@ -110,5 +110,10 @@ namespace PedidosJa.Controllers
             return RedirectToAction("SelecionarComplementosPedido", "Complemento");
         }
 
+
+        public ActionResult VerResumo()
+        {
+            return RedirectToAction("ListarProdutosResumoPedido","Produto");
+        }
     }
 }

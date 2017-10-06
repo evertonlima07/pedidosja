@@ -97,8 +97,23 @@ namespace PedidosJa.Controllers
             Pedido pedido = (Pedido)Util.SessionHelper.Get(Util.SessionKeys.PEDIDO);
             Empresa empresa = pedido.Empresa;
             List<Produto> listaProdutos = gp.ObterPorEmpresa(p => p.Empresa.Id == empresa.Id);
+
+            ViewBag.QntdItens = pedido.ListaProdutos.Count;
+
             return View(listaProdutos);
         }
         
+        public ActionResult ListarProdutosResumoPedido()
+        {
+            Pedido pedido = (Pedido)Util.SessionHelper.Get(Util.SessionKeys.PEDIDO);
+            float total = 0f;
+            if (pedido.ListaProdutos.Count > 0) 
+                foreach (Produto p in pedido.ListaProdutos)
+                {
+                    total += p.Preco;
+                }
+            ViewBag.Total = total;
+            return View(pedido.ListaProdutos);
+        }
     }
 }

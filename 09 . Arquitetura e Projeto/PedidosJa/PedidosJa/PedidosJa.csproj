@@ -222,6 +222,7 @@
     <Content Include="Views\Empresa\ListaDeEmpresas.cshtml" />
     <Content Include="Views\Produto\SelecionarProdutoPedido.cshtml" />
     <Content Include="Views\Complemento\SelecionarComplementosPedido.cshtml" />
+    <Content Include="Views\Produto\ListarProdutosResumoPedido.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
