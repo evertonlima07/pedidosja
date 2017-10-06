@@ -1,0 +1,24 @@
+﻿@model Model.Models.Pedido
+
+@{
+    ViewBag.Title = "Finalizar Pedido";
+}
+
+<h2>Finalizar Pedido</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
+        Endereço de Entrega @Html.DropDownList("Enderecos")<br />
+        <br />
+        <br />
+        <input type="submit" value="Concluir Pedido" class="btn btn-default"/>
+            
+        
+    </div>
+}

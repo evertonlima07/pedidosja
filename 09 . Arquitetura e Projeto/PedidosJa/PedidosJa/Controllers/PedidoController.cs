@@ -13,12 +13,12 @@ namespace PedidosJa.Controllers
         public ActionResult ListaDePedidos()
         {
             GerenciadoraPedido rp = new GerenciadoraPedido();
-            Empresa empresa = (Empresa) Util.SessionHelper.Get(Util.SessionKeys.EMPRESA);
+            Empresa empresa = (Empresa)Util.SessionHelper.Get(Util.SessionKeys.EMPRESA);
             List<Pedido> listaPedidos = rp.ObterPedidos(p => p.Empresa.Id == empresa.Id);
             int t = rp.ObterTodos().Count;
             return View(listaPedidos);
         }
-        
+
         // GET: Pedido
         public ActionResult ListaDePedidosUsuario()
         {
@@ -76,7 +76,7 @@ namespace PedidosJa.Controllers
             GerenciadoraPedido gp = new GerenciadoraPedido();
 
             Empresa empresa = ge.Obter(e => e.Id == id);
-            Usuario usuario = (Usuario) Util.SessionHelper.Get(Util.SessionKeys.USUARIO);
+            Usuario usuario = (Usuario)Util.SessionHelper.Get(Util.SessionKeys.USUARIO);
 
             Pedido pedido = new Pedido();
             pedido.ListaProdutos = new List<Produto>();
@@ -102,7 +102,7 @@ namespace PedidosJa.Controllers
             novo.Preco = produto.Preco;
             novo.ListaComplemento = new List<Complemento>();
 
-            Pedido pedidoAtual = (Pedido) Util.SessionHelper.Get(Util.SessionKeys.PEDIDO);
+            Pedido pedidoAtual = (Pedido)Util.SessionHelper.Get(Util.SessionKeys.PEDIDO);
             pedidoAtual.ListaProdutos.Add(novo);
 
             Util.SessionHelper.Set(Util.SessionKeys.PRODUTO, novo);
@@ -113,7 +113,43 @@ namespace PedidosJa.Controllers
 
         public ActionResult VerResumo()
         {
-            return RedirectToAction("ListarProdutosResumoPedido","Produto");
+            return RedirectToAction("ListarProdutosResumoPedido", "Produto");
+        }
+
+        public ActionResult FinalizarPedido()
+        {
+            GerenciadoraEndereco ge = new GerenciadoraEndereco();
+            Usuario user = (Usuario)Util.SessionHelper.Get(Util.SessionKeys.USUARIO);
+            List<Endereco> lista = ge.ObterPorUsuario(e => e.Usuario.Id == user.Id);
+            List<SelectListItem> itens = new List<SelectListItem>();
+            itens.Add(new SelectListItem { Text = "Selecione o endereço ...", Value = "0", Selected = true });
+            for (int i = 0; i < lista.Count; i++)
+            {
+                itens.Add(new SelectListItem { Text = lista[i].Apelido, Value = "" + lista[i].Id });
+            }
+            ViewBag.Enderecos = itens;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult FinalizarPedido(FormCollection form)
+        {
+            if (String.Compare(form["Enderecos"], "0") == 0) return RedirectToAction("ListarProdutosResumoPedido", "Produto");
+            GerenciadoraEndereco ge = new GerenciadoraEndereco();
+            Endereco endereco = ge.Obter(e => e.Id == Int32.Parse(form["Enderecos"]));
+
+            Pedido pedido = (Pedido)Util.SessionHelper.Get(Util.SessionKeys.PEDIDO);
+            pedido.DescricaoPagamento = "A vista";
+            pedido.Data = DateTime.Now;
+            pedido.EnderecoUsuario = endereco.Nome + " - " + endereco.Numero;
+            pedido.Situacao = "A fazer";
+
+            GerenciadoraPedido gp = new GerenciadoraPedido();
+            gp.Adicionar(pedido);
+
+            Util.SessionHelper.Set(Util.SessionKeys.PEDIDO, null);
+
+            return RedirectToAction("ListaDeEmpresas", "Empresa");
         }
     }
 }

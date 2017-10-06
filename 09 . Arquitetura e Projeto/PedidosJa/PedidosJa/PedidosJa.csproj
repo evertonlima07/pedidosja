@@ -223,6 +223,7 @@
     <Content Include="Views\Produto\SelecionarProdutoPedido.cshtml" />
     <Content Include="Views\Complemento\SelecionarComplementosPedido.cshtml" />
     <Content Include="Views\Produto\ListarProdutosResumoPedido.cshtml" />
+    <Content Include="Views\Pedido\FinalizarPedido.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
