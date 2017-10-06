@@ -56,10 +56,10 @@ namespace PedidosJa.Controllers
             gEmp.Adicionar(empresa1);
 
             Empresa empresa2 = new Empresa();
-            empresa2.Nome = "Daniel Tech";
+            empresa2.Nome = "Marilene";
             empresa2.Telefone = "79998397106";
-            empresa2.Login = "danieltech";
-            empresa2.Senha = "danieltech";
+            empresa2.Login = "marilene";
+            empresa2.Senha = "marilene";
             empresa2.Funcionamento = "ABERTO";
 
             gEmp.Adicionar(empresa2);
