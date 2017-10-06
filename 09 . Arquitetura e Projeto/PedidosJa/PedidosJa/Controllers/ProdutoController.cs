@@ -90,15 +90,15 @@ namespace PedidosJa.Controllers
             }
             produto.ComplementosFormatados = linha;
         }
-        /*
+        
         public ActionResult SelecionarProdutoPedido()
         {
             GerenciadoraProduto gp = new GerenciadoraProduto();
             Pedido pedido = (Pedido)Util.SessionHelper.Get(Util.SessionKeys.PEDIDO);
             Empresa empresa = pedido.Empresa;
-            //List<Produto> listaProdutos = gp.ObterTodosDaEmpresa(p => p.Empresa.Id == empresa.Id);
+            List<Produto> listaProdutos = gp.ObterPorEmpresa(p => p.Empresa.Id == empresa.Id);
             return View(listaProdutos);
         }
-        */
+        
     }
 }

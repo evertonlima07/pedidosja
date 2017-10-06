@@ -106,7 +106,7 @@ namespace PedidosJa.Controllers
             Produto produto1 = new Produto();
             produto1.Nome = "Coca Cola 1L";
             produto1.Preco = 5.20f;
-            produto1.Empresa = gEmp.Obter(e => e.Id == 1);
+            produto1.Empresa = empresa1;
             produto1.ListaComplemento = new List<Complemento>();
             produto1.ListaComplemento.Add(gComp.Obter(c => c.Id == 1));
 
@@ -115,7 +115,7 @@ namespace PedidosJa.Controllers
             Produto produto2 = new Produto();
             produto2.Nome = "X Frango";
             produto2.Preco = 8.00f;
-            produto1.Empresa = gEmp.Obter(e => e.Id == 1);
+            produto2.Empresa = empresa1;
             produto2.ListaComplemento = new List<Complemento>();
 
             gProd.Adicionar(produto2);

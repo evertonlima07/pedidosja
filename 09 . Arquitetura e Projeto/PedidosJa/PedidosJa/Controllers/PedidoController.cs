@@ -89,5 +89,24 @@ namespace PedidosJa.Controllers
 
             return RedirectToAction("SelecionarProdutoPedido", "Produto");
         }
+
+        public ActionResult AdicionarProdutoAoPedido(int id)
+        {
+
+            GerenciadoraProduto gp = new GerenciadoraProduto();
+            Produto produto = gp.Obter(p => p.Id == id);
+
+            Produto novo = new Produto();
+            novo.Id = produto.Id;
+            novo.Nome = produto.Nome;
+            novo.Preco = produto.Preco;
+            novo.ListaComplemento = new List<Complemento>();
+
+            Pedido pedidoAtual = (Pedido) Util.SessionHelper.Get(Util.SessionKeys.PEDIDO);
+            pedidoAtual.ListaProdutos.Add(novo);
+
+            return RedirectToAction("SelecionarProdutoPedido", "Produto");
+        }
+
     }
 }
