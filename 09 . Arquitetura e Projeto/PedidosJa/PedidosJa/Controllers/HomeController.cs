@@ -47,12 +47,12 @@ namespace PedidosJa.Controllers
 
             //CRIANDO EMPRESAS
             Empresa empresa1 = new Empresa();
-            empresa1.Nome = "Itatech Jr.";
+            empresa1.Nome = "Mamata Lanches";
             empresa1.Telefone = "79998397106";
-            empresa1.Login = "itatech";
-            empresa1.Senha = "itatech";
-            empresa1.Funcionamento = "FECHADO";
-            
+            empresa1.Login = "mamata";
+            empresa1.Senha = "mamata";
+            empresa1.Funcionamento = "ABERTO";
+
             gEmp.Adicionar(empresa1);
 
             Empresa empresa2 = new Empresa();
@@ -60,9 +60,18 @@ namespace PedidosJa.Controllers
             empresa2.Telefone = "79998397106";
             empresa2.Login = "danieltech";
             empresa2.Senha = "danieltech";
-            empresa2.Funcionamento = "FECHADO";
+            empresa2.Funcionamento = "ABERTO";
 
             gEmp.Adicionar(empresa2);
+
+            Empresa empresa3 = new Empresa();
+            empresa3.Nome = "Ita Lanches tech Jr.";
+            empresa3.Telefone = "79998397106";
+            empresa3.Login = "itatech";
+            empresa3.Senha = "itatech";
+            empresa3.Funcionamento = "ABERTO";
+
+            gEmp.Adicionar(empresa3);
 
             //CRIANDO USUARIOS
             Usuario usuario1 = new Usuario();
@@ -73,7 +82,17 @@ namespace PedidosJa.Controllers
             usuario1.Telefone = "79 998397106";
 
             gUser.Adicionar(usuario1);
+        
+            
+            Usuario usuario2 = new Usuario();
+            usuario2.Nome = "Everton Lima";
+            usuario2.Email = "everton.lima07@hotmail.com";
+            usuario2.Login = "everton";
+            usuario2.Senha = "everton";
+            usuario2.Telefone = "79 998962288";
 
+            gUser.Adicionar(usuario2);
+            
             //CRIANDO ENDERECOS
             Endereco endereco = new Endereco();
             endereco.Nome = "Rua Francisco Oliveira";
@@ -84,6 +103,26 @@ namespace PedidosJa.Controllers
             endereco.Usuario = gUser.Obter(u => u.Id == 1);
 
             gEnd.Adicionar(endereco);
+            
+            Endereco endereco2 = new Endereco();
+            endereco2.Nome = "Av. Antonio Cornelio da Fonseca";
+            endereco2.Numero = "205";
+            endereco2.Cep = "49500810";
+            endereco2.Complemento = "Proximo a UFS";
+            endereco2.Apelido = "Casa";
+            endereco2.Usuario = gUser.Obter(u => u.Id == 2);
+
+            gEnd.Adicionar(endereco2);
+            
+            Endereco endereco3 = new Endereco();
+            endereco3.Nome = "Av. Vereador Olímpio Grande";
+            endereco3.Numero = "S/N";
+            endereco3.Cep = "49500810";
+            endereco3.Complemento = "UFS, Bloco A, Itatech Jr.";
+            endereco3.Apelido = "Itatech";
+            endereco3.Usuario = gUser.Obter(u => u.Id == 1);
+
+            gEnd.Adicionar(endereco3);
 
             //CRIANDO COMPLEMENTOS
             Complemento c1 = new Complemento();
@@ -93,33 +132,82 @@ namespace PedidosJa.Controllers
 
 
             Complemento c2 = new Complemento();
-            c2.Descricao = "Katchup";
+            c2.Descricao = "Ervilha";
             c2.Empresa = gEmp.Obter(e => e.Id == 1);
             gComp.Adicionar(c2);
 
             Complemento c3 = new Complemento();
-            c3.Descricao = "Guardanapo";
-            c3.Empresa = gEmp.Obter(e => e.Id == 2);
+            c3.Descricao = "Batata Palha";
+            c3.Empresa = gEmp.Obter(e => e.Id == 1);
             gComp.Adicionar(c3);
+            
+            Complemento c4 = new Complemento();
+            c4.Descricao = "Katchup";
+            c4.Empresa = gEmp.Obter(e => e.Id == 1);
+            gComp.Adicionar(c4);
 
+            Complemento c5 = new Complemento();
+            c5.Descricao = "Maionese";
+            c5.Empresa = gEmp.Obter(e => e.Id == 1);
+            gComp.Adicionar(c4);
+            
             //CRIANDO PRODUTOS
             Produto produto1 = new Produto();
-            produto1.Nome = "Coca Cola 1L";
+            produto1.Nome = "X Mamata";
             produto1.Preco = 5.20f;
             produto1.Empresa = empresa1;
             produto1.ListaComplemento = new List<Complemento>();
             produto1.ListaComplemento.Add(gComp.Obter(c => c.Id == 1));
 
             gProd.Adicionar(produto1);
-
+            
             Produto produto2 = new Produto();
-            produto2.Nome = "X Frango";
-            produto2.Preco = 8.00f;
+            produto2.Nome = "Cachorro quente";
+            produto2.Preco = 3.50f;
             produto2.Empresa = empresa1;
             produto2.ListaComplemento = new List<Complemento>();
 
             gProd.Adicionar(produto2);
+            
+            Produto produto3 = new Produto();
+            produto3.Nome = "X Frango";
+            produto3.Preco = 8.00f;
+            produto3.Empresa = empresa1;
+            produto3.ListaComplemento = new List<Complemento>();
 
+            gProd.Adicionar(produto3);
+
+            Produto produto4 = new Produto();
+            produto4.Nome = "Lasanha Molho Branco";
+            produto4.Preco = 6.00f;
+            produto4.Empresa = empresa1;
+            produto4.ListaComplemento = new List<Complemento>();
+
+            gProd.Adicionar(produto4);
+
+            Produto produto5 = new Produto();
+            produto5.Nome = "Lasanha Molho Tradicional";
+            produto5.Preco = 6.00f;
+            produto5.Empresa = empresa1;
+            produto5.ListaComplemento = new List<Complemento>();
+
+            gProd.Adicionar(produto5);
+
+            Produto produto6 = new Produto();
+            produto6.Nome = "Água 500ml";
+            produto6.Preco = 2.50f;
+            produto6.Empresa = empresa1;
+            produto6.ListaComplemento = new List<Complemento>();
+
+            gProd.Adicionar(produto6);
+            
+            Produto produto7 = new Produto();
+            produto7.Nome = "Coca Cola 1L";
+            produto7.Preco = 5.50f;
+            produto7.Empresa = empresa1;
+            produto7.ListaComplemento = new List<Complemento>();
+
+            gProd.Adicionar(produto7);
 
             //CRIANDO PEDIDOS
             Pedido pedido1 = new Pedido();
@@ -135,7 +223,7 @@ namespace PedidosJa.Controllers
             pedido1.Data = DateTime.Now;
 
             gPed.Adicionar(pedido1);
-
+            /*
             Pedido pedido2 = new Pedido();
             pedido2.Empresa = gEmp.Obter(e => e.Id == 1);
             pedido2.EnderecoUsuario = "Rua Quintino de Lacerda";
@@ -144,10 +232,11 @@ namespace PedidosJa.Controllers
             pedido2.NomeUsuario = "Daniel Lima";
             pedido2.Situacao = "A fazer";
             pedido2.Usuario = gUser.Obter(u => u.Id == 1);
+            pedido2.ListaProdutos.Add(gProd.Obter(p => p.Id == 2));
             pedido2.Data = DateTime.Now;
 
             gPed.Adicionar(pedido2);
-
+            */
         }
 
     }
